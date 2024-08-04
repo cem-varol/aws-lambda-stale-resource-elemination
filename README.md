@@ -16,15 +16,15 @@ EC2:
 Lambda: 
 - Create a lambda function 
 - Upload the source code 
-- test the code 
+- Test the code 
 - It will be failed about execution duration( 3 seconds). IN configuration time incerease the execution time to 10 seconds.
-- Test agaan. 
+- Test again. 
 - Soruce code will fail again because of permissions. 
   - Code checks the exsitance instances. If therre is an instance actively running code does nothing.
     If there is a snapshot that belongs to instance and the instance exists no more, this zombie snapshot 
-    will be deleted bu code. For this reason we should give following permission to lammda function: 
-    1- decribeInstances
-    2- describe snapshots, deleteSnapshosts
+    will be deleted by code. For this reason we should give following permission to lambda function: 
+    1- DecribeInstances
+    2- DescribeSnapshots, DeleteSnapshosts
 
 Lambda Function Permission Settings:
 
